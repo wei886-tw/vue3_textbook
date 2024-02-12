@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .font-style{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background-color: pink;
+            display: inline-block;
+
+        }
+        @keyframes marquee-left-to-right {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes marquee-right-to-left {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .marquee-container {
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee-content.left-to-right,
+        .marquee-content.right-to-left {
+            display: inline-block;
+            padding: 10px;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            width: 100%;
+
+        }
+
+        .marquee-content.left-to-right {
+            animation-name: marquee-left-to-right;
+        }
+
+        .marquee-content.right-to-left {
+            animation-name: marquee-right-to-left;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <marquee  behavior="sliding" scrollamount="10" class="font-style">樂樂是</marquee>
+    <marquee width="100%" behavior="sliding" direction="right" scrollamount="11" bgcolor="yellow" onmouseover="stop()" onmouseout="start()" >
+        <img src="https://i.kym-cdn.com/entries/icons/original/000/046/895/huh_cat.jpg" alt="" height="200">
+        <img src="https://i.kym-cdn.com/entries/icons/original/000/046/895/huh_cat.jpg" alt="" height="200">
+        <img src="https://i.kym-cdn.com/entries/icons/original/000/046/895/huh_cat.jpg" alt="" height="200">
+        <img src="https://i.kym-cdn.com/entries/icons/original/000/046/895/huh_cat.jpg" alt="" height="200">
+
+        <img src="https://i.kym-cdn.com/entries/icons/original/000/046/895/huh_cat.jpg" alt="" height="200">
+
+        <img src="https://i.kym-cdn.com/entries/icons/original/000/046/895/huh_cat.jpg" alt="" height="200">
+
+        
+    </marquee>
+    <!-- behavior 都選 sliding -->
+    <!-- direction 預設是從左邊，要右邊就寫 right -->
+    <!-- scrollamount 跑馬燈速度 -->
+    <!-- onmouseover 滑鼠指到會停住 -->
+    <!-- onmouseout="start()" 滑鼠離開會啟動 -->
+    <!-- scrolldelay='' 延遲啟動-->
+</body>
+
+</html>
